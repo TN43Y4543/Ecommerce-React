@@ -1,0 +1,78 @@
+
+/* Order Page Styling */
+
+.order-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Order Box (Card) */
+.order-container {
+    background: rgba(0, 0, 0, 0.2); /* Slightly darker for better contrast */
+    backdrop-filter: blur(20px); /* Corrected blur value */
+    -webkit-backdrop-filter: blur(20px); /* Ensures compatibility with Safari */
+    padding: 40px;
+    width: 500px; /* Increased width */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* More prominent shadow */
+    border-radius: 15px;
+    text-align: center;
+    margin: 60px auto; /* Centered horizontally */
+}
+
+
+/* Title */
+.order-title {
+    color:black;
+    font-size: 26px; /* Bigger font size */
+    font-weight: bold;
+}
+
+/* Text */
+.order-text {
+    color: black;
+    margin-top: 15px;
+    font-size: 18px; /* Increased font size */
+    line-height: 1.6;
+}
+
+/* Order Summary Box */
+.order-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 3px solid black;
+    text-align: left;
+    font-size: 18px; /* Larger text */
+}
+
+.order-summary h2 {
+    font-size: 22px; /* Bigger header */
+    color: black;
+    margin-bottom: 10px;
+}
+
+.order-summary p {
+    color: black;
+    font-size: 18px;
+}
+
+/* Buttons */
+.order-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.btn-custom {
+    width: 180px; /* Increased button size */
+    font-size: 16px; /* Bigger font */
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+}
+@media (max-width: 540px) {
+   .order-container{
+    width: 100%;
+   }
+  }
+  

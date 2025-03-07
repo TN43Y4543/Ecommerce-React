@@ -1,0 +1,115 @@
+.cartpage {
+   display: flex;
+   box-sizing: border-box;
+   background-color: rgb(229, 226, 222);
+   padding: 10px;
+   flex-wrap: wrap;
+
+
+}
+
+
+.products {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds spacing between items */
+    padding: 10px;
+    overflow: auto;
+    max-height: 600px;
+}
+.products::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+
+.products::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    height: 10px;
+}
+
+
+.pricelist{
+    width: 25%;
+    height: max-content;
+    background-color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+h3{
+    display: flex;
+    justify-content: space-between;
+}
+.clear{
+    font-size: 24px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: aliceblue;
+    border: none;
+}
+.clear:hover{
+    transform: scale(1.05); 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+
+}
+.pricelist button{
+    background-color: orange;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    width: 180px;
+    height: 40px;
+    outline: none;
+    border: none;
+}
+.pricelist p{
+    color: blue;
+
+}
+.count{
+    color: red;
+    font-size: 18px;
+    border: 3px dotted rgb(126, 58, 160);
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    gap: 5px;
+    
+}
+.increment,.decrement{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    outline: none;
+    border: none;
+
+}
+@media (max-width: 860px) {
+    .cartpage {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+    }
+    .pricelist{
+        width: 280px;
+    }
+    .products{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        
+    }
+}
