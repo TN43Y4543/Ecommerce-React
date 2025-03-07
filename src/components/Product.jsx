@@ -130,7 +130,23 @@ function addItemToCart(product)
                   </button>
                 </p>
                 {/* Show message if the item is in the cart */}
-                {isInCart && <p style={{ color: "green", marginTop: "10px" }}>Item added to cart ✅</p>}
+                <div style={{ position: "relative", minHeight: "50px" }}>
+                 {isInCart && (
+                 <p
+               style={{
+                 color: "green",
+                 marginTop: "10px",
+                 marginBottom:"0",
+                 position: "absolute",
+                 bottom: "0",
+                 left: "50%",
+                 transform: "translateX(-50%)",
+               }}
+    >
+            Item added to cart ✅
+        </p>
+     )}
+    </div>
               </p>
             </li>
           );
