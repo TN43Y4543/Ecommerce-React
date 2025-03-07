@@ -108,14 +108,20 @@ function addItemToCart(product)
 
           return (
             <li key={p.id} onClick={() => navigate(`/details/${p.id}`)}>
-              <p className="img" >
+              <div className="img" >
                 <img src={p.image} alt={p.name} />
-              </p>
-              <p className="item">
+              </div>
+              <div className="item">
                 <p className="name one">{p.name}</p>
                 <p className="size one">{p.size}</p>
                 <p className="price one">₹{p.price}</p>
-                <p className="button">
+                {isInCart && (
+                 <p className="added">
+                Item added to cart ✅
+              </p>
+                )}
+
+                <div className="button">
                   <button onClick={(e) => {
                     e.stopPropagation(); // Prevent navigation when clicking the button
                     addItemToCart(p);
@@ -128,26 +134,10 @@ function addItemToCart(product)
                   }}>
                     Buy Now
                   </button>
-                </p>
+                </div>
                 {/* Show message if the item is in the cart */}
-                <div style={{ position: "relative", minHeight: "50px" }}>
-                 {isInCart && (
-                 <p
-               style={{
-                 color: "green",
-                 marginTop: "10px",
-                 marginBottom:"0",
-                 position: "absolute",
-                 bottom: "0",
-                 left: "50%",
-                 transform: "translateX(-50%)",
-               }}
-    >
-            Item added to cart ✅
-        </p>
-     )}
-    </div>
-              </p>
+  
+              </div>
             </li>
           );
         })}

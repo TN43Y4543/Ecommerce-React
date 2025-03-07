@@ -8,6 +8,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { useSelector} from 'react-redux'
 import "../components/Header.css"
 import { useState } from 'react';
+import elegance  from "../assets/Elegance.png"
 
 
 
@@ -40,6 +41,9 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+           
+
+            <Nav.Link as={Link} to="/" ><img src={elegance} alt="Logo"  style={{width: "60px",height:"30px"}}/></Nav.Link>
             <Nav.Link as={Link} to="/" >Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About Us</Nav.Link>
             <Nav.Link as={Link} to="/products">Products</Nav.Link>
